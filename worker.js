@@ -1,5 +1,5 @@
 // Vocab Cards — Cloudflare Worker
-// Serves the flashcard app at "/" and finds pictures for each word.
+// Serves the flashcard app at "/" and finds pictures for every word.
 //
 // Optional secrets (Worker > Settings > Variables and Secrets):
 //   ACCESS_CODE  – a passcode the app must send; stops strangers using your Worker
