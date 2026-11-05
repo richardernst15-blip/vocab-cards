@@ -1,0 +1,6 @@
+{
+  // Tells Cloudflare how to deploy this repo. "name" must match the Worker's name in Cloudflare.
+  "name": "vocab-cards",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01"
+}
