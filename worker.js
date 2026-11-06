@@ -818,7 +818,8 @@ function renderSession(){
     back = picHTML(c) + wordHTML(c) + '<div class="en">' + esc(c.en) + '</div>' + (c.pos ? '<div class="pos">' + esc(c.pos) + '</div>' : '') + ex + stats + credit;
   } else {
     var a = answer(c, f);
-    front = picHTML(c, ' small') + wordHTML(c) + '<div class="ask">' + esc(FORM[f].label) + '</div>';
+    var picOnly = f === 'masu' && c.image_id;
+    front = picHTML(c, picOnly ? '' : ' small') + (picOnly ? '' : wordHTML(c)) + '<div class="ask">' + esc(FORM[f].label) + '</div>';
     back = '<div class="ask" style="margin:0 0 6px">' + esc(FORM[f].label) + '</div><div class="jp big">' + esc(a.main) + '</div>' +
       (a.alt ? '<div class="sub">' + esc(a.alt) + '</div>' : '') +
       '<div class="en">' + esc(c.jp) + ' — ' + esc(c.en) + '</div>' + stats;
